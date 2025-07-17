@@ -5,12 +5,15 @@ import App from "./App";
 import "./index.css";
 import { BookProvider } from "./Context/BookContext";
 import { NoteProvider } from "./Context/NotesContext";
+import { ExpenseProvider } from "./Context/ExpenseContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <BookProvider>
       <NoteProvider>
-        <App />
+        <ExpenseProvider>
+          <App />
+        </ExpenseProvider>
       </NoteProvider>
     </BookProvider>
   </BrowserRouter>
